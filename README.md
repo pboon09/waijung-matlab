@@ -166,8 +166,6 @@ Open MATLAB and create a new Simulink model.
    - Baud: 2000000 (or match your STM32 UART configuration)
    - Other parameters: 8-None-1 (8 data bits, no parity, 1 stop bit)
 
-![Serial Setup Block](picture/serial_setup_example.png)
-
 ### 3. Configure Waijung Serial Receive Block
 
 1. Add a "Serial_Receive" block from the Waijung Blockset to your model
@@ -181,8 +179,6 @@ Open MATLAB and create a new Simulink model.
    - Number of data port, type SINGLE: 3 (for your three float values)
    - Number of data port, type INT16: 3 (for your three int16 values)
    - Set all other data type counts to 0
-
-![Serial Receive Configuration](picture/serial_receive_config.png)
 
 The block will automatically create output ports for each data field:
 - First output will be a READY signal
@@ -202,8 +198,6 @@ The block will automatically create output ports for each data field:
    - Number of data port, type INT16: 3 (for three int16 values)
    - Set all other data type counts to 0
 
-![Serial Transmit Configuration](picture/serial_transmit_config.png)
-
 The block will automatically create input ports for each data field:
 - First three inputs will be for your SINGLE (float) values
 - Last three inputs will be for your INT16 values
@@ -213,8 +207,6 @@ The block will automatically create input ports for each data field:
 1. Connect the output ports of the Serial_Receive block to scopes, displays, or other blocks to visualize received data
 2. Connect signal sources (constants, signal generators, etc.) to the input ports of the Serial_Transmit block
 3. Your completed model should look similar to this:
-
-![Complete Simulink Model Example](picture/complete_model_example.png)
 
 ### 6. Run the Simulation
 
